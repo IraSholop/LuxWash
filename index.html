@@ -15,7 +15,7 @@
         <div class="lw"></div>
         <nav>
             <ul class="list">
-                <li><button class="item" onclick="showText('lite')">Слабке забруднення</button></li>
+                <li><button class="item color-one-btn" onclick="showText('lite')">Слабке забруднення</button></li>
                 <li><button class="item color-two-btn" onclick="showText('medium')">Середнє забруднення</button></li>
                 <li><button class="item color-three-btn" onclick="showText('hard')">Сильне забруднення</button></li>
             </ul>
@@ -239,6 +239,8 @@
                   </div>
     
         </section>
+
+        <button id="scrollBtn" class="scroll-btn" onclick="scrollToContent()">Прокрутити вниз</button>
     </main>
 
 
@@ -253,22 +255,43 @@
            sect.forEach(sect => {
             if (sect.classList.contains(className)) {
                 sect.classList.remove("opasiti");
-                if (className === "medium" || className === "hard") {                    
-                    sect.classList.remove("anim");
-                    sect.classList.add("anim");
-                }
                 sect.classList.add("opasiti");
             }
             else{
                 sect.classList.add("opasiti");
-                if (className === "medium" || className === "hard") {
-                    sect.classList.add("anim");
-                    sect.classList.remove("anim");
-                }
                 sect.classList.remove("opasiti");
             }
            })
         }
+
+
+        function checkScrollButton(section) {
+    // Знаходимо кнопку прокрутки
+    const scrollBtn = document.getElementById('scrollBtn');
+    
+    // Перевіряємо висоту контенту і екрану
+    if (section.scrollHeight > window.innerHeight) {
+        // Якщо контент великий, показуємо кнопку прокрутки
+        scrollBtn.style.display = 'block';
+    } else {
+        // Якщо контент вміщується на екрані, ховаємо кнопку
+        scrollBtn.style.display = 'none';
+    }
+}
+
+function scrollToContent() {
+    // Знаходимо наступний елемент, куди потрібно прокрутити
+    const currentSection = document.querySelector('.content-box[style*="display: block"]');
+    if (currentSection) {
+        // Прокручуємо до наступного елемента
+        currentSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        });
+    }
+}
+
+
     </script>
 </body>
 </html>
