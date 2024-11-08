@@ -168,3 +168,27 @@ body{
     margin-bottom: 5px;
     font-size: 20px;
 }
+
+
+.anim{
+    animation-duration: 3s;          
+    animation-name: fadeIn;         
+    animation-iteration-count: 1;   
+    animation-direction: normal;   
+    z-index: -9;              
+}
+  
+
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-50px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+  }
+  

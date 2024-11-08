@@ -250,14 +250,21 @@
            console.log(className);
            console.log(sect);
            
-           
            sect.forEach(sect => {
             if (sect.classList.contains(className)) {
                 sect.classList.remove("opasiti");
+                if (className === "medium" || className === "hard") {                    
+                    sect.classList.remove("anim");
+                    sect.classList.add("anim");
+                }
                 sect.classList.add("opasiti");
             }
             else{
                 sect.classList.add("opasiti");
+                if (className === "medium" || className === "hard") {
+                    sect.classList.add("anim");
+                    sect.classList.remove("anim");
+                }
                 sect.classList.remove("opasiti");
             }
            })
