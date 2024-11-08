@@ -134,18 +134,24 @@ body{
 }
 .lite{
   opacity: 0;
+  position: absolute;
+  top: -9999px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .medium{
   opacity: 0;
+  position: absolute;
+  top: -9999px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .hard{
   opacity: 0;
+  position: absolute;
+  top: -9999px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,6 +159,8 @@ body{
 
 .opasiti{
   opacity: 1;
+  position: relative; 
+  top: auto;
 }
 .next{
     color: #fff;
