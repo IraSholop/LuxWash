@@ -15,6 +15,9 @@ body{
     font-style: normal;
     font-weight: 100;
 }
+main{
+  margin-bottom: 30px;
+}
 .lw{
     width: 90%;
     height: 2px;
@@ -125,6 +128,9 @@ body{
 }
 .size{
     font-size: 16px;
+}
+.size-title{
+    font-size: 20px;
 }
 .info-header{
   margin: 0;
