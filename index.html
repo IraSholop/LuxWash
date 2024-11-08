@@ -265,31 +265,7 @@
         }
 
 
-        function checkScrollButton(section) {
-    // Знаходимо кнопку прокрутки
-    const scrollBtn = document.getElementById('scrollBtn');
-    
-    // Перевіряємо висоту контенту і екрану
-    if (section.scrollHeight > window.innerHeight) {
-        // Якщо контент великий, показуємо кнопку прокрутки
-        scrollBtn.style.display = 'block';
-    } else {
-        // Якщо контент вміщується на екрані, ховаємо кнопку
-        scrollBtn.style.display = 'none';
-    }
-}
 
-function scrollToContent() {
-    // Знаходимо наступний елемент, куди потрібно прокрутити
-    const currentSection = document.querySelector('.content-box[style*="display: block"]');
-    if (currentSection) {
-        // Прокручуємо до наступного елемента
-        currentSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end'
-        });
-    }
-}
 
 
     </script>
