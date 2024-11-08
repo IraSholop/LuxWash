@@ -82,8 +82,8 @@ body{
 }
 .box-svg{
     background-color: #313131;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -92,13 +92,13 @@ body{
     z-index: 999;
 }
 .img{
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
 }
 .step-one{
     background-color: transparent;
-    width: 263px;
-    height: 63px;
+    width: 233px;
+    height: 53px;
     border-radius: 50px;
     margin-left: -50px;
     display: flex;
@@ -124,7 +124,7 @@ body{
     flex-direction: column;
 }
 .size{
-    font-size: 18px;
+    font-size: 16px;
 }
 .info-header{
   margin: 0;
@@ -174,28 +174,3 @@ body{
   
 
 
-.content-box {
-    display: none; /* Початково контент прихований */
-    padding: 20px;
-    background: #f0f0f0;
-    margin-top: 20px;
-}
-
-.scroll-btn {
-    display: none; /* Початково кнопка прокрутки прихована */
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FFA100;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.scroll-btn:hover {
-    background-color: #FF7518;
-}
